@@ -20,6 +20,7 @@ export default function Nav() {
   useEffect(() => {
     if(!isFocused){
       setIsShopPressed(false);
+      setIsMenuPressed(false);
     }
   },[isFocused]);
 
@@ -31,7 +32,7 @@ export default function Nav() {
           Card <Text className="text-black">Merch</Text>
         </Text>
       </Text>
-      <View className="flex flex-row justify-around items-center mr-4 w-48 h-12 bg-red-200">
+      <View className="flex flex-row gap-8 justify-end items-center mr-10 w-48 h-12">
         
         {/* //! navbar logos */}
 
@@ -45,16 +46,6 @@ export default function Nav() {
           {
             isShopPressed && isFocused ? <ShopColoredSvg width="20" height="20"/> : <ShopOutlineSvg width="20" height="20"/>
           }
-        </Pressable>
-
-        <Pressable onPress={() => 
-          <View className="flex gap-2 ">
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-            <Text>Hello world</Text>
-          </View>
-        }>
-          <BurgerMenuSvg width="20" h="12"/>
         </Pressable>
       </View>
     </View>
